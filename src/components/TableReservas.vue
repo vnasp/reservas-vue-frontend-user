@@ -3,9 +3,9 @@
     <thead>
       <tr>
         <th>Nombre y Apellido</th>
-        <th>Número de Comensales</th>
+        <th>Número de Personas</th>
         <th>Fecha</th>
-        <th>Hora</th>
+        <th>Check-in</th>
         <th>Número de Contacto</th>
         <th>Correo de Contacto</th>
         <th v-if="!adminStatus">Acciones</th>
@@ -14,7 +14,7 @@
     <tbody>
       <tr v-for="reserva in reservas" :key="reserva.id">
         <td>{{ getClienteNombre(reserva.user_id) }}</td>
-        <td>{{ reserva.comensales }}</td>
+        <td>{{ reserva.personas }}</td>
         <td>{{ reserva.fecha }}</td>
         <td>{{ reserva.hora }}</td>
         <td>{{ reserva.telefono }}</td>

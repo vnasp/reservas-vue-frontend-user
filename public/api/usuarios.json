@@ -3,9 +3,9 @@
         "id": 1,
         "nombre": "Patricia",
         "apellido": "Thompson",
-        "email": "lwarner@gmail.com",
+        "email": "admin@correo.com",
         "telefono": "829.776.0800x8272",
-        "password": "z_e6_JqxrP",
+        "password": "1234",
         "adminStatus": true
     },
     {

@@ -1,11 +1,11 @@
 import { createStore } from "vuex";
-import getProductos from "@/services/productService";
+import getServicios from "@/services/servicesService";
 import getUsuarios from "@/services/userService";
 import getReservas from "@/services/bookingService";
 
 export default createStore({
   state: {
-    menu: [],
+    servicios: [],
     usuarios: [],
     usuarioActual: null,
     reservas: []
@@ -28,8 +28,8 @@ export default createStore({
     }
   },
   mutations: {
-    SET_MENU(state, menu) {
-      state.menu = menu;
+    SET_SERVICIOS(state, servicios) {
+      state.servicios = servicios;
     },
     SET_USUARIOS(state, usuarios) {
       state.usuarios = usuarios;
@@ -60,13 +60,12 @@ export default createStore({
     }
   },
   actions: {
-    async setMenu({ commit }) {
+    async setServicios({ commit }) {
       try {
-        let data = await getProductos();
-        console.log('Datos obtenidos:', data);
-        commit('SET_MENU', data);
+        let data = await getServicios();
+        commit('SET_SERVICIOS', data);
       } catch (error) {
-        console.log('Error al obtener el menú:', error);
+        console.log('Error al obtener los servicios:', error);
       }
     },
     async cargarUsuarios({ commit }) {
@@ -100,14 +99,12 @@ export default createStore({
     async cargarReservas({ commit }) {
       try {
         let reservas = await getReservas();
-        console.log('Reservas obtenidas del JSON:', reservas);
         commit('SET_RESERVAS', reservas);
       } catch (error) {
         console.log('Error al obtener las reservas:', error);
       }
     },
     registrarReserva({ commit, state }, reserva) {
-      console.log('Registrar reserva en acción:', reserva);
       commit('ADD_RESERVA', reserva);
       console.log('Reservas después de registrar:', state.reservas);
     },

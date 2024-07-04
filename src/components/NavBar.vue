@@ -1,6 +1,6 @@
 <template>
  <header>
-  <nav class="navbar navbar-expand-lg bg-dark shadow-sm fixed-top p-0" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg bg-dark shadow-md fixed-top p-0" data-bs-theme="dark">
     <div class="container">
       <a class="navbar-brand" href="/"><img :src="logo" class="header__logo"/> {{ brand }}</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,16 +36,16 @@ export default {
   name: "NavBar",
   data() {
     return {
-      brand: "Jack Rabbit Slim's",
-      logo: "/img/logo.png",
+      brand: "Hostal Araucaria",
+      logo: "/img/logo2.png",
       rutas_generales: [
         {
           name: "Inicio",
           path: "/"
         },
         {
-          name: "Menú",
-          path: "/menu"
+          name: "Servicios",
+          path: "/servicios"
         },
         {
           name: "Contacto",

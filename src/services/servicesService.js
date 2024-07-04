@@ -1,9 +1,9 @@
 import axios from "axios";
 
-// Obtener los items del menú
-const getProductos = async () => {
+// Obtener los items del servicios
+const getServicios = async () => {
   try {
-    let response = await axios.get(`/api/menu.json`);
+    let response = await axios.get(`/api/servicios.json`);
     return response.data;
   } catch (error) {
     alert(
@@ -13,4 +13,4 @@ const getProductos = async () => {
   }
 };
 
-export default getProductos;
+export default getServicios;

@@ -1,19 +1,19 @@
 <template>
   <article class="card h-100 rounded-3 shadow-sm mb-4">
-    <img :src="product.img" class="card-img-top" :alt="product.nombre">
+    <img :src="service.img" class="card-img-top" :alt="service.nombre">
     <div class="card-header">
-      <h5 class="card-title text-center text-uppercase">{{ product.nombre }}
+      <h5 class="card-title text-center text-uppercase">{{ service.nombre }}
       </h5>
     </div>
     <div class="card-body">
-      <p class="card-text">Tiempo: {{ product.tiempo }}</p>
-      <p class="card-text pt-3">Ingredientes:</p>
+      <p class="card-text">Tipo: {{ service.tipo }}</p>
+      <p class="card-text pt-3">Características:</p>
       <ul>
-        <li v-for="ingrediente in product.ingredientes" :key="ingrediente" class="text-capitalize">{{ ingrediente }}</li>
+        <li v-for="caracteristica in service.caracteristicas" :key="caracteristica" class="text-capitalize">{{ caracteristica }}</li>
       </ul>
     </div>
     <div class="card-footer text-end">
-      <p class="card-text text-primary fw-bold fs-4">Precio: {{ formatPrice(product.precio) }}</p>
+      <p class="card-text text-primary fw-bold fs-4">Precio: {{ formatPrice(service.precio) }}</p>
       </div>
   </article>
 </template>
@@ -22,7 +22,7 @@
 export default {
   name: "CardProduct",
   props: {
-    product: {
+    service: {
       type: Object,
       required: true,
     },

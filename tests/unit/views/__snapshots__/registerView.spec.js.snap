@@ -3,7 +3,7 @@
 exports[`RegisterView.vue Crear un snapshot de la vista de Registro 1`] = `
 <main class="container pt-5 h-100 d-flex flex-column align-items-center">
   <h1 class="my-5 text-center"><i class="bi bi-bookmark-star-fill me-1"></i>Crea tu cuenta</h1>
-  <p class="text-center w-75">Registrándote en Jack Rabbit Slim's podrás reservar una mesa para cuantos invitados quieras y disfrutar de un momento y platos inolvidables.</p>
+  <p class="text-center w-75">Registrándote en Hostal Araucaria podrás reservar una habitación para ti y tus acompañantes, y disfrutar de una estadía inolvidable con servicios excepcionales y actividades emocionantes.</p>
   <form class="w-75">
     <div class="mb-3"><label for="nombre" class="form-label">Nombre</label><input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required=""></div>
     <div class="mb-3"><label for="apellido" class="form-label">Apellido</label><input type="text" class="form-control" id="apellido" placeholder="Ingresa tu apellido" required=""></div>

@@ -9,9 +9,9 @@ const routes = [
     component: HomeView
   },
   {
-    path: "/menu",
-    name: "menu",
-    component: () => import("../views/MenuView.vue"),
+    path: "/servicios",
+    name: "servicios",
+    component: () => import("../views/ServiciosView.vue"),
   },
   {
     path: "/contacto",

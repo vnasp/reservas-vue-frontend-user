@@ -1,21 +1,21 @@
 <template>
-  <main class="container pt-5">
-    <h1 class="my-5 text-center"><i class="bi bi-calendar-check-fill me-1"></i>Reserva una mesa</h1>
+  <main class="container pt-5 h-100">
+    <h1 class="my-5 text-center"><i class="bi bi-calendar-check-fill me-1"></i>Reserva una Habitación</h1>
     <form @submit.prevent="handleReservas" class="row g-3">
       <div class="col-md-6">
         <label for="nombre" class="form-label">Nombre del cliente</label>
         <input type="text" v-model="reserva.nombre" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required>
       </div>
       <div class="col-md-6">
-        <label for="comensales" class="form-label">Número de comensales</label>
-        <input type="number" v-model="reserva.comensales" class="form-control" id="comensales" placeholder="Número de personas" required min="1">
+        <label for="personas" class="form-label">Número de personas</label>
+        <input type="number" v-model="reserva.personas" class="form-control" id="personas" placeholder="Número de personas" required min="1">
       </div>
       <div class="col-md-6">
         <label for="fecha" class="form-label">Fecha de la reserva</label>
         <input type="date" v-model="reserva.fecha" class="form-control" id="fecha" required>
       </div>
       <div class="col-md-6">
-        <label for="hora" class="form-label">Hora de la reserva</label>
+        <label for="hora" class="form-label">Hora del Check-in</label>
         <input type="time" v-model="reserva.hora" class="form-control" id="hora" required>
       </div>
       <div class="col-md-6">
@@ -44,7 +44,7 @@ export default {
       reserva: {
         id: uuidv4(),
         user_id: '',
-        comensales: 1,
+        personas: 1,
         fecha: '',
         hora: '',
         telefono: '',

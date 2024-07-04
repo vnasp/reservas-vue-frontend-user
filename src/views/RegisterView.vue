@@ -1,7 +1,7 @@
 <template>
   <main class="container pt-5 h-100 d-flex flex-column align-items-center">
     <h1 class="my-5 text-center"><i class="bi bi-bookmark-star-fill me-1"></i>Crea tu cuenta</h1>
-    <p class="text-center w-75">Registrándote en Jack Rabbit Slim's podrás reservar una mesa para cuantos invitados quieras y disfrutar de un momento y platos inolvidables.</p>
+    <p class="text-center w-75">Registrándote en Hostal Araucaria podrás reservar una habitación para ti y tus acompañantes, y disfrutar de una estadía inolvidable con servicios excepcionales y actividades emocionantes.</p>
     <form @submit.prevent="handleRegister" class="w-75">
       <div class="mb-3">
         <label for="nombre" class="form-label">Nombre</label>
@@ -41,11 +41,11 @@ export default {
     return {
       usuario: {
         id: uuidv4(),
-        nombre: '',
-        apellido: '',
-        email: '',
-        telefono: '',
-        password: '',
+        nombre: 'Usuario',
+        apellido: 'Prueba',
+        email: 'usuario@correo.com',
+        telefono: '912345678',
+        password: '1234',
         adminStatus: false
       }
     };

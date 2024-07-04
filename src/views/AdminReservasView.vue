@@ -1,5 +1,5 @@
 <template>
-  <main class="container pt-5">
+  <main class="container pt-5 h-100">
     <h1 class="my-5 text-center"><i class="bi bi-calendar-check-fill me-1"></i>Administrar Reservas</h1>
     <TableReservas :reservas="reservas" :usuarios="usuarios" :adminStatus="true" />
   </main>
