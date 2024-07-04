@@ -1,0 +1,219 @@
+[
+    {
+        "id": 1,
+        "nombre": "Ensalada César",
+        "img": "/img/menu/dish_1.webp",
+        "ingredientes": [
+            "lechuga",
+            "queso parmesano",
+            "pollo",
+            "crutones",
+            "salsa césar"
+        ],
+        "precio": 19623,
+        "tiempo": "Entrada"
+    },
+    {
+        "id": 2,
+        "nombre": "Sopa de Mariscos",
+        "img": "/img/menu/dish_2.webp",
+        "ingredientes": [
+            "mariscos",
+            "tomate",
+            "cebolla",
+            "ajo",
+            "pimiento",
+            "caldo de pescado"
+        ],
+        "precio": 12915,
+        "tiempo": "Fondo"
+    },
+    {
+        "id": 3,
+        "nombre": "Carpaccio de Res",
+        "img": "/img/menu/dish_3.webp",
+        "ingredientes": [
+            "res",
+            "limón",
+            "rúcula",
+            "queso parmesano",
+            "aceite de oliva"
+        ],
+        "precio": 4138,
+        "tiempo": "Postre"
+    },
+    {
+        "id": 4,
+        "nombre": "Ceviche de Camarones",
+        "img": "/img/menu/dish_4.webp",
+        "ingredientes": [
+            "camarones",
+            "limón",
+            "cebolla",
+            "cilantro",
+            "tomate",
+            "ají"
+        ],
+        "precio": 18839,
+        "tiempo": "Postre"
+    },
+    {
+        "id": 5,
+        "nombre": "Tarta de Queso",
+        "img": "/img/menu/dish_5.webp",
+        "ingredientes": [
+            "queso crema",
+            "azúcar",
+            "huevos",
+            "galletas",
+            "mantequilla"
+        ],
+        "precio": 19424,
+        "tiempo": "Fondo"
+    },
+    {
+        "id": 6,
+        "nombre": "Pulpo a la Gallega",
+        "img": "/img/menu/dish_6.webp",
+        "ingredientes": [
+            "pulpo",
+            "pimentón",
+            "patata",
+            "aceite de oliva",
+            "sal"
+        ],
+        "precio": 18184,
+        "tiempo": "Entrada"
+    },
+    {
+        "id": 7,
+        "nombre": "Gambas al Ajillo",
+        "img": "/img/menu/dish_7.webp",
+        "ingredientes": [
+            "gambas",
+            "ajo",
+            "guindilla",
+            "aceite de oliva",
+            "perejil"
+        ],
+        "precio": 4478,
+        "tiempo": "Fondo"
+    },
+    {
+        "id": 8,
+        "nombre": "Gazpacho Andaluz",
+        "img": "/img/menu/dish_8.webp",
+        "ingredientes": [
+            "tomate",
+            "pepino",
+            "pimiento",
+            "cebolla",
+            "aceite de oliva",
+            "vinagre"
+        ],
+        "precio": 12159,
+        "tiempo": "Entrada"
+    },
+    {
+        "id": 9,
+        "nombre": "Paella Valenciana",
+        "img": "/img/menu/dish_9.webp",
+        "ingredientes": [
+            "arroz",
+            "pollo",
+            "conejo",
+            "judía verde",
+            "garrofón",
+            "tomate",
+            "aceite de oliva",
+            "azafrán"
+        ],
+        "precio": 9083,
+        "tiempo": "Entrada"
+    },
+    {
+        "id": 10,
+        "nombre": "Croquetas de Jamón",
+        "img": "/img/menu/dish_10.webp",
+        "ingredientes": [
+            "jamón",
+            "harina",
+            "leche",
+            "mantequilla",
+            "huevo",
+            "pan rallado"
+        ],
+        "precio": 10069,
+        "tiempo": "Fondo"
+    },
+    {
+        "id": 11,
+        "nombre": "Calamares a la Romana",
+        "img": "/img/menu/dish_11.webp",
+        "ingredientes": [
+            "calamares",
+            "harina",
+            "huevo",
+            "limón",
+            "aceite para freír"
+        ],
+        "precio": 3554,
+        "tiempo": "Fondo"
+    },
+    {
+        "id": 12,
+        "nombre": "Tortilla Española",
+        "img": "/img/menu/dish_12.webp",
+        "ingredientes": [
+            "huevos",
+            "patatas",
+            "cebolla",
+            "aceite de oliva",
+            "sal"
+        ],
+        "precio": 19832,
+        "tiempo": "Entrada"
+    },
+    {
+        "id": 13,
+        "nombre": "Pollo al Ajillo",
+        "img": "/img/menu/dish_13.webp",
+        "ingredientes": [
+            "pollo",
+            "ajo",
+            "vino blanco",
+            "aceite de oliva",
+            "perejil"
+        ],
+        "precio": 6617,
+        "tiempo": "Entrada"
+    },
+    {
+        "id": 14,
+        "nombre": "Flan de Huevo",
+        "img": "/img/menu/dish_14.webp",
+        "ingredientes": [
+            "huevos",
+            "leche",
+            "azúcar",
+            "vainilla",
+            "caramelo"
+        ],
+        "precio": 10828,
+        "tiempo": "Postre"
+    },
+    {
+        "id": 15,
+        "nombre": "Churros con Chocolate",
+        "img": "/img/menu/dish_15.webp",
+        "ingredientes": [
+            "harina",
+            "agua",
+            "aceite de oliva",
+            "azúcar",
+            "chocolate"
+        ],
+        "precio": 7974,
+        "tiempo": "Postre"
+    }
+]

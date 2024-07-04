@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginView.vue Crear un snapshot de la vista de Login 1`] = `
+<main class="container pt-5 h-100 d-flex justify-content-center">
+  <div class="w-50">
+    <h1 class="my-5 text-center"><i class="bi bi-box-arrow-in-right me-1"></i>Inicio de Sesión</h1>
+    <form class="row g-3">
+      <div class="col-12"><label for="email" class="form-label">Correo Electrónico</label><input type="email" class="form-control" id="email" placeholder="Ingresa tu e-mail" required=""></div>
+      <div class="col-12"><label for="password" class="form-label">Contraseña</label><input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required=""></div>
+      <div class="col-12 text-center"><button type="submit" class="btn btn-primary">Iniciar Sesión</button></div>
+    </form>
+  </div>
+</main>
+`;

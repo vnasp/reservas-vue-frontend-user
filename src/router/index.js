@@ -1,25 +1,83 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from "vue-router"
+import HomeView from "../views/HomeView.vue"
+import store from '@/store';
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
+    path: "/",
+    name: "inicio",
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: "/menu",
+    name: "menu",
+    component: () => import("../views/MenuView.vue"),
+  },
+  {
+    path: "/contacto",
+    name: "contacto",
+    component: () => import("../views/ContactoView.vue"),
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: () => import("./../views/LoginView.vue"),
+  },
+  {
+    path: "/registro",
+    name: "registro",
+    component: () => import("./../views/RegisterView.vue"),
+  },
+  {
+    path: "/reservas",
+    name: "reservas",
+    component: () => import("./../views/ReservarView.vue"),
+    meta: { requiresAuth: true, requiresNonAdmin: true }
+  },
+  {
+    path: "/admin/usuarios",
+    name: "admin-usuarios",
+    component: () => import("./../views/AdminUsuariosView.vue"),
+    meta: { requiresAuth: true, requiresAdmin: true }
+  },
+  {
+    path: "/admin/reservas",
+    name: "admin-reservas",
+    component: () => import("./../views/AdminReservasView.vue"),
+    meta: { requiresAuth: true, requiresAdmin: true }
+  },
+  {
+    path: "/mis-reservas",
+    name: "mis-reservas",
+    component: () => import("./../views/UsuarioReservasView.vue"),
+    meta: { requiresAuth: true }
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "notFound",
+    component: () => import("./../views/NotFoundView.vue"),
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+
+// Protección de las rutas de admin y usuario
+router.beforeEach((to, from, next) => {
+  const isAuthenticated = store.getters.isAuthenticated;
+  const adminStatus = store.getters.adminStatus;
+
+  if (to.meta.requiresAuth && !isAuthenticated) {
+    next({ name: 'login' });
+  } else if (to.meta.requiresAdmin && !adminStatus) {
+    next({ name: 'inicio' });
+  } else if (to.meta.requiresNonAdmin && adminStatus) {
+    next({ name: 'inicio' });
+  } else {
+    next();
+  }
+});
 
 export default router
