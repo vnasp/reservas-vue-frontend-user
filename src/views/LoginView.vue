@@ -44,7 +44,7 @@ export default {
           this.$router.push('/mis-reservas');
         }
       } catch (error) {
-        alert('Error al iniciar sesión. Por favor, intenta de nuevo.');
+        this.$swal('Error al iniciar sesión. Por favor, intenta de nuevo.');
         console.error('Error al iniciar sesión:', error);
       }
     }

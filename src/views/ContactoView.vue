@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-      alert('Tu formulario fue enviado con éxito.');
+      this.$swal('Tu mensaje fue enviado con éxito');
       this.contacto = {
         correo: '',
         asunto: '',

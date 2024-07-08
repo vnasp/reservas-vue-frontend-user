@@ -63,10 +63,10 @@ export default {
         this.reserva.telefono = this.usuarioActual.telefono;
         this.reserva.correo = this.usuarioActual.email;
         await this.registrarReserva(this.reserva);
-        alert('Reserva realizada con éxito. ¡Te esperamos!');
+        this.$swal('Reserva realizada con éxito. ¡Te esperamos!');
         this.$router.push('/mis-reservas');
       } catch (error) {
-        alert('Hubo un error al reservar. Contáctanos para ayudarte.');
+        this.$swal('Hubo un error al reservar. Contáctanos para ayudarte.');
         console.error('Error al realizar la reserva:', error);
       }
     }
