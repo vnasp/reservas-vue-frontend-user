@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
-import RegisterView from '@/views/RegisterView.vue';
+import RegisterView from '@/views/RegisterForm.vue';
 
 describe('RegisterView.vue', () => {
   it('Crear un snapshot de la vista de Registro', () => {

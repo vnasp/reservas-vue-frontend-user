@@ -25,7 +25,7 @@ export default {
     },
     framework2: {
       type: String,
-      default: "Bootstrap",
+      default: "Bootstrap 5",
     },
     framework2Link: {
       type: String,

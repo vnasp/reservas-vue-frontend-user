@@ -3,7 +3,7 @@ import axios from "axios";
 // Obtener los usuarios registrados
 const getUsuarios = async () => {
   try {
-    let response = await axios.get(`/api/usuarios.json`);
+    let response = await axios.get(`./api/usuarios.json`);
     return response.data;
   } catch (error) {
     alert(

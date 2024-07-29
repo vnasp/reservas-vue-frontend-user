@@ -1,6 +1,6 @@
 <template>
   <NavBar />
-  <router-view />
+  <router-view/>
   <FooterComponent />
 </template>
 
@@ -21,6 +21,9 @@ export default {
 }
 </script>
 <style lang="scss">
+html {
+  scroll-behavior: smooth;
+}
 #app {
   height: 100vh;
   font-size: 18px;

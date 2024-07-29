@@ -3,7 +3,7 @@ import axios from "axios";
 // Obtener los items del servicios
 const getServicios = async () => {
   try {
-    let response = await axios.get(`/api/servicios.json`);
+    let response = await axios.get(`./api/servicios.json`);
     return response.data;
   } catch (error) {
     alert(

@@ -26,7 +26,7 @@ const routes = [
   {
     path: "/registro",
     name: "registro",
-    component: () => import("./../views/RegisterView.vue"),
+    component: () => import("../views/RegisterForm.vue"),
   },
   {
     path: "/reservas",

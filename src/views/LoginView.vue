@@ -1,7 +1,11 @@
 <template>
-  <main class="container pt-5 h-100 d-flex justify-content-center">
-    <div class="w-50">
-      <h1 class="my-5 text-center"><i class="bi bi-box-arrow-in-right me-1"></i>Inicio de Sesión</h1>
+  <main class="container pt-5">
+    <p class="text-primary text-center">Sistema de Reservas</p>
+    <h3 class="text-center mb-5 text-uppercase fw-bolder fs-1">Y olvídate del resto</h3>
+    <p class="text-center">Registrándote en Hostal Patagonia podrás reservar una habitación para ti y tus acompañantes, y disfrutar de una estadía inolvidable con servicios excepcionales y actividades emocionantes.</p>
+    <div class="row d-flex justify-content-evenly mt-5">
+      <div class="col-12 col-lg-5 border rounded-2 p-4 bg-body-tertiary">
+        <h1 class="my-5 text-center"><i class="bi bi-box-arrow-in-right me-1"></i>Inicio de Sesión</h1>
       <form @submit.prevent="handleLogin" class="row g-3">
         <div class="col-12">
           <label for="email" class="form-label">Correo Electrónico</label>
@@ -15,15 +19,23 @@
           <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
         </div>
       </form>
+      </div>
+    <div class="col-12 col-lg-5 border rounded-2 p-4 bg-body-tertiary">
+      <RegisterView/>
     </div>
+  </div>
   </main>
 </template>
 
 <script>
 import { mapActions } from 'vuex';
+import RegisterView from './RegisterForm.vue';
 
 export default {
   name: 'LoginView',
+  components: {
+    RegisterView,
+  },
   data() {
     return {
       datosLogin: {

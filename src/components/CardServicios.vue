@@ -1,6 +1,6 @@
 <template>
   <div class="col">
-    <div class="card card-servicios" :style="{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', width: '22rem', height: '34rem' }">
+    <div class="card card-servicios" :style="{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', width: '22rem', height: '36rem' }">
       <div class="card-body">
        <div> <i :class="iconClass + ' fs-2'"></i>
         <h4 class="mb-4">{{ title }}</h4></div>
