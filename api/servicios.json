@@ -2,7 +2,7 @@
       {
           "id": 1,
           "nombre": "Habitación Doble",
-          "img": "/img/servicios/habitacion_doble.webp",
+          "img": "./img/servicios/habitacion_doble.webp",
           "caracteristicas": [
               "Cama matrimonial",
               "Baño privado",
@@ -15,7 +15,7 @@
       {
           "id": 2,
           "nombre": "Habitación Familiar",
-          "img": "/img/servicios/habitacion_familiar.webp",
+          "img": "./img/servicios/habitacion_familiar.webp",
           "caracteristicas": [
               "Dos camas dobles",
               "Baño privado",
@@ -28,7 +28,7 @@
       {
           "id": 3,
           "nombre": "Tour por el Bosque",
-          "img": "/img/servicios/tour_bosque.webp",
+          "img": "./img/servicios/tour_bosque.webp",
           "caracteristicas": [
               "Guía turístico",
               "Transporte incluido",
@@ -41,7 +41,7 @@
       {
           "id": 4,
           "nombre": "Alquiler de Bicicletas",
-          "img": "/img/servicios/alquiler_bicicletas.webp",
+          "img": "./img/servicios/alquiler_bicicletas.webp",
           "caracteristicas": [
               "Bicicletas de montaña",
               "Casco incluido",
@@ -54,7 +54,7 @@
       {
           "id": 5,
           "nombre": "Clases de Ski",
-          "img": "/img/servicios/clases_ski.webp",
+          "img": "./img/servicios/clases_ski.webp",
           "caracteristicas": [
               "Instructor certificado",
               "Equipo incluido",
@@ -67,7 +67,7 @@
       {
           "id": 6,
           "nombre": "Spa y Masajes",
-          "img": "/img/servicios/spa_masajes.webp",
+          "img": "./img/servicios/spa_masajes.webp",
           "caracteristicas": [
               "Masajes relajantes",
               "Circuito de spa",
@@ -80,7 +80,7 @@
       {
           "id": 7,
           "nombre": "Transporte al Aeropuerto",
-          "img": "/img/servicios/transporte_aeropuerto.webp",
+          "img": "./img/servicios/transporte_aeropuerto.webp",
           "caracteristicas": [
               "Transporte privado",
               "Conductor profesional",
