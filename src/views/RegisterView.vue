@@ -1,7 +1,7 @@
 <template>
   <main class="container pt-5 h-100 d-flex flex-column align-items-center">
     <h1 class="my-5 text-center"><i class="bi bi-bookmark-star-fill me-1"></i>Crea tu cuenta</h1>
-    <p class="text-center w-75">Registrándote en Hostal Araucaria podrás reservar una habitación para ti y tus acompañantes, y disfrutar de una estadía inolvidable con servicios excepcionales y actividades emocionantes.</p>
+    <p class="text-center w-75">Registrándote en Hostal Patagonia podrás reservar una habitación para ti y tus acompañantes, y disfrutar de una estadía inolvidable con servicios excepcionales y actividades emocionantes.</p>
     <form @submit.prevent="handleRegister" class="w-75">
       <div class="mb-3">
         <label for="nombre" class="form-label">Nombre</label>

@@ -1,12 +1,13 @@
 <template>
   <footer class="footer footer--dark text-center py-2 mt-5">
-    <p class="footer__year mb-1">© {{ currentYear }} - Hostal Araucaria - Todos los derechos reservados</p>
-    <p class="footer__text mb-0">
-      Sitio creado con
-      <a :href="framework1Link" target="_blank" rel="noopener noreferrer" class="footer__link">{{ framework1 }}</a>
-      y
-      <a :href="framework2Link" target="_blank" rel="noopener noreferrer" class="footer__link">{{ framework2 }}</a>
-    </p>
+    <div class="container d-flex flex-row justify-content-between">
+      <div class="footer__year mb-1">© {{ currentYear }} - Hostal Patagonia - Todos los derechos reservados</div>
+      <div>Sitio creado con 
+        <a :href="framework1Link" target="_blank" rel="noopener noreferrer" class="footer__link">{{ framework1 }}</a>
+y
+        <a :href="framework2Link" target="_blank" rel="noopener noreferrer" class="footer__link">{{ framework2 }}</a>
+      </div>
+    </div>
   </footer>
 </template>
 
@@ -44,6 +45,10 @@ export default {
   &--dark {
     background-color: var(--bs-dark);
     color: #ffffff;
+    font-size:10px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   
   &__year {

@@ -1,11 +1,11 @@
 <template>
   <div class="col">
-    <div class="bg-dark text-white p-4 rounded-4 text-center">
-      <i :class="iconClass + ' fs-2'"></i>
-      <h3>{{ title }}</h3>
-      <p>{{ description }}</p>
-      <div class="mt-3">
-        <HomeButton :to="to" :text="buttonText"/>
+    <div class="card card-servicios" :style="{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', width: '22rem', height: '34rem' }">
+      <div class="card-body">
+       <div> <i :class="iconClass + ' fs-2'"></i>
+        <h4 class="mb-4">{{ title }}</h4></div>
+        <p class="fw-bolder">{{ description }}</p>
+        <HomeButton :to="to" :text="buttonText" class="card-button-text"/>
       </div>
     </div>
   </div>
@@ -39,9 +39,36 @@ export default {
     buttonText: {
       type: String,
       required: true
+    },
+    backgroundImage: {
+    type: String,
+    required: true,
     }
   }
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.card-servicios {
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px); 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgb(189, 189, 189);
+  margin: 0 auto; /* Centro horizontalmente */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+}
+
+.card-button-text {
+  width: 50%;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+</style>
