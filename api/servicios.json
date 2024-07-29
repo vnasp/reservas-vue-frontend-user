@@ -2,7 +2,7 @@
       {
           "id": 1,
           "nombre": "Habitación Doble",
-          "img": "./img/servicios/habitacion_doble.webp",
+          "img": "./public/img/servicios/habitacion_doble.webp",
           "caracteristicas": [
               "Cama matrimonial",
               "Baño privado",
