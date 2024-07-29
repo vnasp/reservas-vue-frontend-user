@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkreservas_restaurant_valentina_munoz"]=self["webpackChunkreservas_restaurant_valentina_munoz"]||[]).push([[12],{8012:function(n,a,e){e.r(a),e.d(a,{default:function(){return v}});var r=e(6768);const t={class:"container pt-5"},s=(0,r.Lk)("h1",{class:"my-5"},"Página No Encontrada",-1),u=[s];function c(n,a,e,s,c,o){return(0,r.uX)(),(0,r.CE)("main",t,u)}var o={name:"NotFoundView"},i=e(1241);const l=(0,i.A)(o,[["render",c]]);var v=l}}]);
+//# sourceMappingURL=12.9e096e7f.js.map

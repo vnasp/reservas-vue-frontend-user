@@ -1,0 +1,93 @@
+[
+      {
+          "id": 1,
+          "nombre": "Habitación Doble",
+          "img": "/img/servicios/habitacion_doble.webp",
+          "caracteristicas": [
+              "Cama matrimonial",
+              "Baño privado",
+              "WiFi gratuito",
+              "Desayuno incluido"
+          ],
+          "precio": 50000,
+          "tipo": "Alojamiento"
+      },
+      {
+          "id": 2,
+          "nombre": "Habitación Familiar",
+          "img": "/img/servicios/habitacion_familiar.webp",
+          "caracteristicas": [
+              "Dos camas dobles",
+              "Baño privado",
+              "WiFi gratuito",
+              "Desayuno incluido"
+          ],
+          "precio": 80000,
+          "tipo": "Alojamiento"
+      },
+      {
+          "id": 3,
+          "nombre": "Tour por el Bosque",
+          "img": "/img/servicios/tour_bosque.webp",
+          "caracteristicas": [
+              "Guía turístico",
+              "Transporte incluido",
+              "Duración: 3 horas",
+              "Visitas a lugares emblemáticos"
+          ],
+          "precio": 30000,
+          "tipo": "Actividad"
+      },
+      {
+          "id": 4,
+          "nombre": "Alquiler de Bicicletas",
+          "img": "/img/servicios/alquiler_bicicletas.webp",
+          "caracteristicas": [
+              "Bicicletas de montaña",
+              "Casco incluido",
+              "Rutas recomendadas",
+              "Disponible todo el día"
+          ],
+          "precio": 15000,
+          "tipo": "Servicio"
+      },
+      {
+          "id": 5,
+          "nombre": "Clases de Ski",
+          "img": "/img/servicios/clases_ski.webp",
+          "caracteristicas": [
+              "Instructor certificado",
+              "Equipo incluido",
+              "Duración: 2 horas",
+              "Grupos reducidos"
+          ],
+          "precio": 35000,
+          "tipo": "Actividad"
+      },
+      {
+          "id": 6,
+          "nombre": "Spa y Masajes",
+          "img": "/img/servicios/spa_masajes.webp",
+          "caracteristicas": [
+              "Masajes relajantes",
+              "Circuito de spa",
+              "Productos naturales",
+              "Atención personalizada"
+          ],
+          "precio": 45000,
+          "tipo": "Servicio"
+      },
+      {
+          "id": 7,
+          "nombre": "Transporte al Aeropuerto",
+          "img": "/img/servicios/transporte_aeropuerto.webp",
+          "caracteristicas": [
+              "Transporte privado",
+              "Conductor profesional",
+              "Disponible 24/7",
+              "Reservación previa necesaria"
+          ],
+          "precio": 20000,
+          "tipo": "Servicio"
+      }
+  ]
