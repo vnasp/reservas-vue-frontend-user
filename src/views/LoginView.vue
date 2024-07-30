@@ -1,12 +1,12 @@
 <template>
-  <main class="container pt-5">
+  <main id="main-content" class="container pt-5">
     <p class="text-primary text-center">Sistema de Reservas</p>
-    <h3 class="text-center mb-5 text-uppercase fw-bolder fs-1">Y olvídate del resto</h3>
+    <h3 class="text-center mb-5 text-uppercase fw-bolder fs-1">Olvídate del resto</h3>
     <p class="text-center">Registrándote en Hostal Patagonia podrás reservar una habitación para ti y tus acompañantes, y disfrutar de una estadía inolvidable con servicios excepcionales y actividades emocionantes.</p>
     <div class="row d-flex justify-content-evenly mt-5">
       <div class="col-12 col-lg-5 border rounded-2 p-4 bg-body-tertiary">
-        <h1 class="my-5 text-center"><i class="bi bi-box-arrow-in-right me-1"></i>Inicio de Sesión</h1>
-      <form @submit.prevent="handleLogin" class="row g-3">
+        <h4 class="my-5 text-center"><i class="bi bi-check-circle-fill text-dark fs-2"></i><br/>Inicio de Sesión</h4>
+      <form @submit.prevent="handleLogin" class="row g-3 text-center">
         <div class="col-12">
           <label for="email" class="form-label">Correo Electrónico</label>
           <input type="email" v-model="datosLogin.email" class="form-control" id="email" placeholder="Ingresa tu e-mail" required>
@@ -15,7 +15,7 @@
           <label for="password" class="form-label">Contraseña</label>
           <input type="password" v-model="datosLogin.password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required>
         </div>
-        <div class="col-12 text-center">
+        <div class="col-12">
           <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
         </div>
       </form>
@@ -63,3 +63,9 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+input::placeholder {
+    color:#ccc;
+}
+</style>

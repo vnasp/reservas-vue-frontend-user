@@ -2,9 +2,9 @@
   <div class="col">
     <div class="card card-servicios" :style="{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', width: '22rem', height: '36rem' }">
       <div class="card-body">
-       <div> <i :class="iconClass + ' fs-2'"></i>
+       <div> <i :class="iconClass + ' fs-2 text-dark'"></i>
         <h4 class="mb-4">{{ title }}</h4></div>
-        <p class="fw-bolder">{{ description }}</p>
+        <p class="card-description">{{ description }}</p>
         <HomeButton :to="to" :text="buttonText" class="card-button-text"/>
       </div>
     </div>
@@ -64,6 +64,11 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 3rem 2rem;
+}
+.card-description {
+  background:rgba(255, 255, 255, 0.25);
+  padding:20px;
+  border-radius: 10px;
 }
 
 .card-button-text {

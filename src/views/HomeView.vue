@@ -36,7 +36,7 @@ export default {
           title: "Organización de Eventos",
           description:
             "Disfruta del entorno perfecto para tus eventos especiales. Desde bodas íntimas hasta reuniones corporativas.",
-          iconClass: "bi bi-calendar-week",
+          iconClass: "bi bi-calendar-heart-fill",
           to: "/contacto",
           buttonText: "Contactar",
           backgroundImage: "./img/bg-servicios-1.jpg",
@@ -45,7 +45,7 @@ export default {
           title: "Reserva de Habitaciones",
           description:
             "Disfruta de una estadía confortable. Reserva ahora y garantiza tu lugar en el corazón de la Patagonia.",
-          iconClass: "bi bi-journal-bookmark-fill",
+          iconClass: "bi bi-house-fill",
           to: "/reservas",
           buttonText: "Reservar",
           backgroundImage: "./img/bg-servicios-2.jpg",
@@ -54,7 +54,7 @@ export default {
           title: "Variedad de Servicios y Tours",
           description:
             "Desde tours por la región, alquiler de bicicletas, hasta clases de esquí para que disfrutes al máximo de tu visita.",
-          iconClass: "bi bi-binoculars",
+          iconClass: "bi bi-suitcase-lg-fill",
           to: "/servicios",
           buttonText: "Servicios",
           backgroundImage: "./img/bg-servicios-3.jpg",

@@ -9,11 +9,11 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
           <ul class="navbar-nav ps-4 nav-underline">
             <li class="nav-item" v-for="(ruta, index) in rutas_generales" :key="index">
-              <router-link class="nav-link" activeClass="active disabled" :to="ruta.path">{{ ruta.name }}</router-link>
+              <router-link @click="scrollTo('main-content')" class="nav-link" activeClass="active disabled" :to="ruta.path">{{ ruta.name }}</router-link>
             </li>
           </ul>
           <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center gap-2 text-white">
-            <router-link class="nav-link" activeClass="active disabled" to="/login" v-if="!isAuthenticated"><i class="bi bi-person-fill"></i> Ingresar</router-link>
+            <router-link @click="scrollTo('main-content')" class="nav-link" activeClass="active disabled" to="/login" v-if="!isAuthenticated"><i class="bi bi-person-fill"></i> Ingresar</router-link>
             <router-link class="nav-link btn-outline-secondary" activeClass="active disabled" to="/admin/usuarios" v-if="isAuthenticated && adminStatus">Ver Usuarios</router-link>
             <router-link class="nav-link btn-outline-secondary" activeClass="active disabled" to="/admin/reservas" v-if="isAuthenticated && adminStatus">Ver Reservas</router-link>
             <div class="bg-primary rounded-bottom-4 header__reservar" v-if="isAuthenticated && !adminStatus">
@@ -75,6 +75,12 @@ export default {
       this.logout();
       this.$router.push('/');
     },
+    scrollTo(id) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  },
   }
 }
 </script>

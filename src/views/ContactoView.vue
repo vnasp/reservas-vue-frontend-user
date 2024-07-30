@@ -1,5 +1,5 @@
 <template>
-  <main class="container my-5">
+  <main id="main-content" class="container my-5">
     <div class="mb-4 pb-4">
       <p class="text-primary text-center">Contáctanos</p>
       <h3 class="text-center mb-5 text-uppercase fw-bolder fs-1">Envíanos tu idea</h3>
@@ -7,7 +7,7 @@
     </div>
     <div class="row g-5 d-flex">
       <div class="col-12 col-md-6 p-0 border rounded-2">
-        <div class="p-4 bg-body-tertiary w-100">
+        <div class="p-4 bg-body-tertiary w-100 text-center">
           <h4 class="pb-4">Encuéntranos en</h4>
           <p><i class="bi bi-geo-alt"></i> Dirección: Camino al Sur 1234, Chile</p>
           <p><i class="bi bi-telephone"></i> Teléfono: +56 123456789</p>
@@ -16,7 +16,7 @@
         </div>
         <div class="encuentranos rounded-bottom-2"></div> 
       </div>
-      <div class="col-12 col-md-6 d-flex">
+      <div class="col-12 col-md-6 d-flex text-center">
         <div class="border rounded-2 p-4 bg-body-tertiary w-100">
           <h4 class="pb-4">Escríbenos</h4>
           <form @submit.prevent="handleSubmit" class="row g-3">
@@ -56,7 +56,11 @@ export default {
   },
   methods: {
     handleSubmit() {
-      this.$swal('Tu mensaje fue enviado con éxito');
+      this.$swal({
+        title:'Tu mensaje fue enviado con éxito',
+        confirmButtonText: 'Cerrar',
+        confirmButtonColor: "#FFA500",
+      });
       this.contacto = {
         correo: '',
         asunto: '',
