@@ -1,7 +1,8 @@
 <template>
   <main class="container pt-5 h-100">
-    <h1 class="my-5 text-center"><i class="bi bi-calendar-check-fill me-1"></i>Reserva una Habitación</h1>
-    <form @submit.prevent="handleReservas" class="row g-3">
+    <p class="text-primary text-center">Sistema de Reservas</p>
+    <h3 class="text-center mb-5 text-uppercase fw-bolder fs-1">Reserva una habitación</h3>
+      <form @submit.prevent="handleReservas" class="row g-3">
       <div class="col-md-6">
         <label for="nombre" class="form-label">Nombre del cliente</label>
         <input type="text" v-model="reserva.nombre" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required>
@@ -63,7 +64,11 @@ export default {
         this.reserva.telefono = this.usuarioActual.telefono;
         this.reserva.correo = this.usuarioActual.email;
         await this.registrarReserva(this.reserva);
-        this.$swal('Reserva realizada con éxito. ¡Te esperamos!');
+        this.$swal({
+        title:'Reserva realizada con éxito.',
+        confirmButtonText: 'Cerrar',
+        confirmButtonColor: "#FFA500",
+        });
         this.$router.push('/mis-reservas');
       } catch (error) {
         this.$swal('Hubo un error al reservar. Contáctanos para ayudarte.');

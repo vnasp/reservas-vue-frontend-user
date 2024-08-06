@@ -1,6 +1,7 @@
 <template>
   <main class="container pt-5">
-    <h1 class="my-5 text-center"><i class="bi bi-people-fill me-1"></i>Administrar Usuarios</h1>
+    <p class="text-primary text-center">Panel de Administración</p>
+    <h3 class="text-center mb-5 text-uppercase fw-bolder fs-1">Listado de Usuarios</h3>
     <table class="table table-striped">
       <thead>
         <tr>
@@ -22,7 +23,7 @@
           <td>{{ usuario.telefono }}</td>
           <td>{{ usuario.adminStatus ? 'Administrador' : 'Usuario' }}</td>
           <td>
-            <button @click="handleUsuarioRol(usuario)" class="btn btn-sm" :class="{'btn-success': !usuario.adminStatus, 'btn-primary': usuario.adminStatus}">
+            <button @click="handleUsuarioRol(usuario)" class="btn btn-sm" :class="{'btn-primary': !usuario.adminStatus, 'btn-dark': usuario.adminStatus}">
               {{ usuario.adminStatus ? 'Cambiar a Usuario' : 'Cambiar a Administrador' }}
             </button>
           </td>

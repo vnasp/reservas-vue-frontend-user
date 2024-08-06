@@ -1,7 +1,8 @@
 <template>
   <main class="container pt-5 h-100">
-    <h1 class="my-5 text-center"><i class="bi bi-calendar-check-fill me-1"></i>Administrar Reservas</h1>
-    <TableReservas :reservas="reservas" :usuarios="usuarios" :adminStatus="true" />
+    <p class="text-primary text-center">Panel de Administración</p>
+    <h3 class="text-center mb-5 text-uppercase fw-bolder fs-1">Listado de Reservas</h3>
+      <TableReservas :reservas="reservas" :usuarios="usuarios" :adminStatus="true" />
   </main>
 </template>
 

@@ -76,8 +76,13 @@ export default createStore({
         console.log('Error al obtener los usuarios:', error);
       }
     },
-    registrarUsuario({ commit }, usuario) {
+    async registrarUsuario({ commit, dispatch }, usuario) {
       commit('ADD_USUARIO', usuario);
+      // Llama a la acción de login para iniciar sesión automáticamente
+      await dispatch('login', {
+        email: usuario.email,
+        password: usuario.password
+      });
     },
     async login({ state, commit }, datosLogin) {
       const usuario = state.usuarios.find(

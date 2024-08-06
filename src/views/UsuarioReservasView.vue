@@ -1,7 +1,8 @@
 <template>
   <main class="container pt-5 h-100">
-    <h1 class="my-5 text-center"><i class="bi bi-calendar3 me-1"></i>Mis Reservas</h1>
-    <TableReservas :reservas="misReservas" :usuarios="usuarios" :adminStatus="false" @cancelar-reserva="cancelarReserva" />
+    <p v-if="usuarioActual" class="text-primary text-center">¡Hola {{ usuarioActual.nombre }}!</p>
+    <h3 class="text-center mb-5 text-uppercase fw-bolder fs-1">Mis Reservas</h3>
+      <TableReservas :reservas="misReservas" :usuarios="usuarios" :adminStatus="false" @cancelar-reserva="cancelarReserva" />
   </main>
 </template>
 
