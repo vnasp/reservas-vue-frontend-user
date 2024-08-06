@@ -6,23 +6,26 @@
     <div class="row d-flex justify-content-evenly mt-5">
       <div class="col-12 col-lg-5 border rounded-2 p-4 bg-body-tertiary">
         <h4 class="my-5 text-center"><i class="bi bi-check-circle-fill text-dark fs-2"></i><br/>Inicio de Sesión</h4>
-      <form @submit.prevent="handleLogin" class="row g-3 text-center">
-        <div class="col-12">
-          <label for="email" class="form-label">Correo Electrónico</label>
-          <input type="email" v-model="datosLogin.email" class="form-control" id="email" placeholder="Ingresa tu e-mail" required>
+        <form @submit.prevent="handleLogin" class="row g-3 text-center">
+          <div class="col-12">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" v-model="datosLogin.email" class="form-control" id="email" placeholder="Ingresa tu e-mail" required>
+          </div>
+          <div class="col-12">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" v-model="datosLogin.password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+          </div>
+        </form>
+        <div class="alert alert-info mt-5" role="alert">
+          <i class="bi bi-info-circle-fill"></i> Para la vista administrador, utiliza admin@correo.com y 1234 para ingresar.
         </div>
-        <div class="col-12">
-          <label for="password" class="form-label">Contraseña</label>
-          <input type="password" v-model="datosLogin.password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required>
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-        </div>
-      </form>
       </div>
-    <div class="col-12 col-lg-5 border rounded-2 p-4 bg-body-tertiary">
-      <RegisterView/>
-    </div>
+      <div class="col-12 col-lg-5 border rounded-2 p-4 bg-body-tertiary">
+        <RegisterView/>
+      </div>
   </div>
   </main>
 </template>
@@ -67,5 +70,8 @@ export default {
 <style scoped lang="scss">
 input::placeholder {
     color:#ccc;
+}
+.alert {
+  font-size:11px;
 }
 </style>
