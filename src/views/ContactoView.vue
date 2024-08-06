@@ -6,8 +6,8 @@
       <p class="mb-4">¿Buscas el lugar perfecto para tus próximas vacaciones o una ocasión especial? Disfruta de la calidez y la belleza de la región en Hostal Patagonia: el lugar ideal para que tus momentos sean inolvidables. ¡Te esperamos para compartir experiencias únicas y la hospitalidad del sur de Chile!</p>
     </div>
     <div class="row g-5 d-flex">
-      <div class="col-12 col-md-6 p-0 border rounded-2">
-        <div class="p-4 bg-body-tertiary w-100 text-center">
+      <div class="col-12 col-md-6">
+        <div class="border rounded-2 p-4 bg-body-tertiary w-100 text-center">
           <h4 class="pb-4">Encuéntranos en</h4>
           <p><i class="bi bi-geo-alt"></i> Dirección: Camino al Sur 1234, Chile</p>
           <p><i class="bi bi-telephone"></i> Teléfono: +56 123456789</p>
@@ -16,8 +16,8 @@
         </div>
         <div class="encuentranos rounded-bottom-2"></div> 
       </div>
-      <div class="col-12 col-md-6 d-flex text-center">
-        <div class="border rounded-2 p-4 bg-body-tertiary w-100">
+      <div class="col-12 col-md-6">
+        <div class="border rounded-2 p-4 bg-body-tertiary w-100 text-center">
           <h4 class="pb-4">Escríbenos</h4>
           <form @submit.prevent="handleSubmit" class="row g-3">
             <div class="col-12">

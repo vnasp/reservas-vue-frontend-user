@@ -3,8 +3,8 @@
     <p class="text-primary text-center">Sistema de Reservas</p>
     <h3 class="text-center mb-5 text-uppercase fw-bolder fs-1">Olvídate del resto</h3>
     <p class="text-center">Registrándote en Hostal Patagonia podrás reservar una habitación para ti y tus acompañantes, y disfrutar de una estadía inolvidable con servicios excepcionales y actividades emocionantes.</p>
-    <div class="row d-flex justify-content-evenly mt-5">
-      <div class="col-12 col-lg-5 border rounded-2 p-4 bg-body-tertiary">
+    <div class="row d-flex justify-content-evenly mt-5 gap-4 mx-1">
+      <div class="col-12 col-lg-5 border rounded-2 p-2 p-lg-4 bg-body-tertiary">
         <h4 class="my-5 text-center"><i class="bi bi-check-circle-fill text-dark fs-2"></i><br/>Inicio de Sesión</h4>
         <form @submit.prevent="handleLogin" class="row g-3 text-center">
           <div class="col-12">
@@ -23,10 +23,10 @@
           <i class="bi bi-info-circle-fill"></i> Para la vista administrador, utiliza admin@correo.com y 1234 para ingresar.
         </div>
       </div>
-      <div class="col-12 col-lg-5 border rounded-2 p-4 bg-body-tertiary">
+      <div class="col-12 col-lg-5 border rounded-2 p-2 p-lg-4 bg-body-tertiary">
         <RegisterView/>
       </div>
-  </div>
+    </div>
   </main>
 </template>
 
