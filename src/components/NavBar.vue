@@ -1,50 +1,55 @@
 <template>
-  <header :class="{ 'admin-usuarios': isAdminUsersRoute }" class="header d-flex flex-column justify-content-start align-items-center">
-    <nav class="navbar navbar-expand-lg px-4" data-bs-theme="dark">
-      <div class="container">
+  <header :class="{ 'admin-usuarios': isAdminUsersRoute }" class="d-flex flex-column justify-content-start">
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark"> 
+      <div class="container-fluid">
         <a class="navbar-brand fw-bolder fs-2" href="./">HOSTAL</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-          <ul class="navbar-nav ps-4 nav-underline">
-            <li class="nav-item" v-for="(ruta, index) in rutas_generales" :key="index">
-              <router-link @click="scrollTo('main-content')" class="nav-link" activeClass="active disabled"
-                :to="ruta.path">{{ ruta.name }}</router-link>
-            </li>
-          </ul>
-          <ul class="navbar-nav ps-4 nav-underline">
-            <li class="nav-item" v-if="!isAuthenticated">
-              <router-link @click="scrollTo('main-content')" class="nav-link" activeClass="active disabled"
-                to="/login"><i class="bi bi-person-fill"></i> Ingresar</router-link>
-            </li>
-            <li class="nav-item" v-if="isAuthenticated && adminStatus">
-              <router-link class="nav-link btn-outline-secondary" activeClass="active disabled" to="/admin/usuarios">Ver
-                Usuarios</router-link>
-            </li>
-            <li class="nav-item" v-if="isAuthenticated && adminStatus">
-              <router-link class="nav-link btn-outline-secondary" activeClass="active disabled" to="/admin/reservas"
-              >Ver Reservas</router-link>
-            </li>
-            <li class="nav-item" v-if="isAuthenticated && !adminStatus">
-              <div class="bg-primary rounded-bottom-4 header__reservar">
-              <router-link class="nav-link" activeClass="active" to="/reservas"><i
-                  class="bi bi-calendar3 me-1"></i>Reservar</router-link>
-            </div>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" activeClass="active" to="/mis-reservas"
-                v-if="isAuthenticated && !adminStatus">Mis Reservas</router-link>
-            </li>
-            <li class="nav-item" v-if="isAuthenticated">
-              <button @click="handleLogout" class="nav-link">Cerrar Sesión</button>
-            </li>
-          </ul>
+        <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav nav-underline justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item" v-for="(ruta, index) in rutas_generales" :key="index">
+                <router-link @click="scrollTo('main-content')" class="nav-link" activeClass="active disabled"
+                  :to="ruta.path">{{ ruta.name }}</router-link>
+              </li>
+              <li class="nav-item" v-if="!isAuthenticated">
+                <router-link @click="scrollTo('main-content')" class="nav-link" activeClass="active disabled"
+                  to="/login"><i class="bi bi-person-fill"></i> Ingresar</router-link>
+              </li>
+              <li class="nav-item" v-if="isAuthenticated && adminStatus">
+                <router-link class="nav-link btn-outline-secondary" activeClass="active disabled"
+                  to="/admin/usuarios">Ver
+                  Usuarios</router-link>
+              </li>
+              <li class="nav-item" v-if="isAuthenticated && adminStatus">
+                <router-link class="nav-link btn-outline-secondary" activeClass="active disabled"
+                  to="/admin/reservas">Ver Reservas</router-link>
+              </li>
+              <li class="nav-item" v-if="isAuthenticated && !adminStatus">
+                <div class="bg-primary rounded-bottom-4 header__reservar">
+                  <router-link class="nav-link text-black" activeClass="active" to="/reservas"><i
+                      class="bi bi-calendar3 me-1"></i>Reservar</router-link>
+                </div>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" activeClass="active" to="/mis-reservas"
+                  v-if="isAuthenticated && !adminStatus">Mis Reservas</router-link>
+              </li>
+              <li class="nav-item" v-if="isAuthenticated">
+                <button @click="handleLogout" class="nav-link">Cerrar Sesión</button>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
-    <div v-if="!isAdminUsersRoute" class="text-uppercase text-center header-content">
+    <div v-if="!isAdminUsersRoute" class="mt-5 pt-5 text-uppercase text-center">
       <h1 class="fw-bolder mt-5">Hostal Patagonia</h1>
       <div class="d-inline-block">
         <h2 class="d-inline-block">Tu próxima aventura<span class="text-primary">.</span></h2>
@@ -62,6 +67,7 @@ import { mapGetters, mapActions } from 'vuex';
 import HomeButton from '@/components/HomeButton.vue';
 import { useRoute } from 'vue-router';
 import { computed } from 'vue';
+
 
 export default {
   name: "NavBar",
@@ -127,8 +133,6 @@ header {
   height: 600px;
   margin-top: 0;
   padding-top: 1rem;
-  position: relative;
-  overflow: hidden;
 }
 
 header.admin-usuarios {
@@ -137,37 +141,38 @@ header.admin-usuarios {
   border-bottom: 4px solid orange;
 }
 
+
 h2 {
   text-transform: uppercase;
   font-size: 3rem !important;
   font-weight: 900;
 }
 
-.header__reservar {
-  margin-top: -20px;
-  padding: 1rem 2rem;
-}
-
-.navbar {
-  width: 80%;
-  border-radius: 10px;
-  background-color: #3c79cfbf;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.header-content {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-}
-
 @media (min-width: 992px) {
+  h1 {
+    text-align: start;
+  }
+
   h2 {
     font-size: 5rem !important;
+  }
+
+  header {
+    align-items: center;
+  }
+  .header__reservar {
+  margin-top: -10px;
+  padding: 0.7rem 2rem;
+  }
+
+  .navbar {
+    width: 80%;
+    border-radius: 10px;
+    background-color: #3c79cfbf;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
 }
 </style>

@@ -15,7 +15,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="usuario in usuarios" :key="usuario.id">
+        <tr v-for="usuario in filteredUsuarios" :key="usuario.id">
           <td>{{ usuario.id }}</td>
           <td>{{ usuario.nombre }}</td>
           <td>{{ usuario.apellido }}</td>
@@ -39,7 +39,10 @@ import { mapGetters, mapActions } from 'vuex';
 export default {
   name: 'AdminUsuariosView',
   computed: {
-    ...mapGetters(['usuarios'])
+    ...mapGetters(['usuarios', 'usuarioActual']),
+    filteredUsuarios() {
+      return this.usuarios.filter(usuario => usuario.id !== this.usuarioActual.id);
+    }
   },
   methods: {
     ...mapActions(['cambiarRol']),
