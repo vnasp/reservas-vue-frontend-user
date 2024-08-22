@@ -58,7 +58,7 @@ export default {
     async handleRegister() {
       try {
         await this.registrarUsuario(this.usuario);
-        this.$router.push('/mis-reservas')
+        this.$router.push('/reservas')
       } catch (error) {
         console.error('Error al registrar usuario:', error);
       }

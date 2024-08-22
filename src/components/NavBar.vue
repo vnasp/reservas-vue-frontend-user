@@ -136,9 +136,12 @@ header {
 }
 
 header.admin-usuarios {
-  background: url('/public/img/bg-wood.jpg');
-  height: 120px;
+  background: url('/public/img/background.jpg');
+  height: 300px;
   border-bottom: 4px solid orange;
+  background-repeat: no-repeat;
+  background-position: top 30% center;
+  background-size: cover;
 }
 
 

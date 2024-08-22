@@ -56,7 +56,7 @@ export default {
         if (user.adminStatus) {
           this.$router.push('/admin/usuarios');
         } else {
-          this.$router.push('/mis-reservas');
+          this.$router.push('/reservas');
         }
       } catch (error) {
         this.$swal('Error al iniciar sesión. Por favor, intenta de nuevo.');

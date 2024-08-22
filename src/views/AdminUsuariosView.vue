@@ -1,5 +1,5 @@
 <template>
-  <main class="container pt-5">
+  <main class="container pt-5 h-100">
     <p class="text-primary text-center">Panel de Administración</p>
     <h3 class="text-center mb-5 text-uppercase fw-bolder fs-1">Listado de Usuarios</h3>
     <table class="table table-striped">

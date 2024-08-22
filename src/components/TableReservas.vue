@@ -3,11 +3,12 @@
     <thead>
       <tr>
         <th>Nombre y Apellido</th>
-        <th>Número de Personas</th>
+        <th>N° Personas</th>
         <th>Fecha</th>
         <th>Check-in</th>
-        <th>Número de Contacto</th>
-        <th>Correo de Contacto</th>
+        <th>Tipo</th>
+        <th>Fono Contacto</th>
+        <th>Correo Contacto</th>
         <th v-if="!adminStatus">Acciones</th>
       </tr>
     </thead>
@@ -17,6 +18,7 @@
         <td>{{ reserva.personas }}</td>
         <td>{{ reserva.fecha }}</td>
         <td>{{ reserva.hora }}</td>
+        <td>{{ reserva.tipo }}</td>
         <td>{{ reserva.telefono }}</td>
         <td>{{ reserva.correo }}</td>
         <td v-if="!adminStatus">

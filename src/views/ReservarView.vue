@@ -15,9 +15,32 @@
         <label for="fecha" class="form-label">Fecha de la reserva</label>
         <input type="date" v-model="reserva.fecha" class="form-control" id="fecha" required>
       </div>
-      <div class="col-md-6">
-        <label for="hora" class="form-label">Hora del Check-in</label>
-        <input type="time" v-model="reserva.hora" class="form-control" id="hora" required>
+      <div class="col-md-3">
+        <label for="hora" class="form-label">Hora de la reserva</label>
+        <select v-model="reserva.hora" class="form-control" id="hora" required>
+          <option value="09:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="12:00">12:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+          <option value="16:00">16:00</option>
+          <option value="17:00">17:00</option>
+          <option value="18:00">18:00</option>
+          <option value="19:00">19:00</option>
+          <option value="20:00">20:00</option>
+          <option value="21:00">21:00</option>
+          <option value="22:00">22:00</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label for="tipo" class="form-label">Servicio reservado</label>
+        <select v-model="reserva.tipo" class="form-control" id="tipo" required>
+          <option value="Alojamiento">Alojamiento</option>
+          <option value="Actividad">Actividad</option>
+          <option value="Servicio">Servicio</option>
+        </select>
       </div>
       <div class="col-md-6">
         <label for="telefono" class="form-label">Número de contacto</label>
@@ -49,7 +72,8 @@ export default {
         fecha: '',
         hora: '',
         telefono: '',
-        correo: ''
+        correo: '',
+        tipo: ''
       }
     };
   },
