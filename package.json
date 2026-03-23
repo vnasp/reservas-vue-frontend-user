@@ -20,6 +20,9 @@
     "vue-sweetalert2": "^5.0.11",
     "vuex": "^4.0.0"
   },
+  "overrides": {
+    "serialize-javascript": "^7.0.4"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
